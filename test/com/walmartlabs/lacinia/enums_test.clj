@@ -79,12 +79,11 @@
 (deftest resolver-must-return-defined-enum
   (let [schema (utils/compile-schema "bad-resolver-enum.edn"
                                      {:query/current-status (constantly :ok)})]
-    (expect-exception
-      "Field resolver returned an undefined enum value."
-      {:enum-values #{:bad
-                      :good}
-       :resolved-value :ok}
-      (utils/execute schema "{ current_status }"))))
+       (is (= {:data   {:current_status nil}
+               :errors [{:locations [{:column 3 :line 1}]
+                         :message   "Field resolver returned an undefined enum value."
+                         :path      [:current_status]}]}
+              (utils/execute schema "{ current_status }")))))
 
 (deftest enum-resolver-must-return-named-value
   (let [bad-value (Date.)

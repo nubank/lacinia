@@ -1,6 +1,6 @@
-(defproject com.walmartlabs/lacinia "0.35.0"
+(defproject nubank/lacinia "0.35.0-SNAPSHOT"
   :description "A GraphQL server implementation in Clojure"
-  :url "https://github.com/walmartlabs/lacinia"
+  :url "Fork of com.walmartlabs/lacinia."
   :license {:name "Apache, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0"}
   :plugins [[lein-codox "0.10.3"]
@@ -22,6 +22,6 @@
   :aliases {"benchmarks" ["run" "-m" "perf"]}
   :jvm-opts ["-Xmx1g" "-XX:-OmitStackTraceInFastThrow"]
   :test2junit-output-dir ~(or (System/getenv "CIRCLE_TEST_REPORTS") "target/test2junit")
-  :codox {:source-uri "https://github.com/walmartlabs/lacinia/blob/master/{filepath}#L{line}"
+  :codox {:source-uri "https://github.com/nubank/lacinia/blob/master/{filepath}#L{line}"
           :source-paths ["src"]                             ; and not vendor-src
           :metadata   {:doc/format :markdown}})
