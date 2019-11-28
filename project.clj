@@ -1,4 +1,4 @@
-(defproject nubank/lacinia "0.35.0"
+(defproject nubank/lacinia "0.35.1-SNAPSHOT"
   :description "A GraphQL server implementation in Clojure"
   :url "Fork of com.walmartlabs/lacinia."
   :license {:name "Apache, Version 2.0"
