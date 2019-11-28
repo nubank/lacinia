@@ -4,7 +4,9 @@
   :license {:name "Apache, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0"}
   :plugins [[lein-codox "0.10.3"]
-            [test2junit "1.2.5"]]
+            [test2junit "1.2.5"]
+            [s3-wagon-private "1.3.1"]]
+  :deploy-repositories [["releases" {:url "s3p://nu-maven/releases/" :no-auth true}]]
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [clj-antlr "0.2.5"]
                  [org.clojure/data.json "0.2.6"]]
