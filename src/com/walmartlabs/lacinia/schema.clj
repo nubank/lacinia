@@ -20,7 +20,7 @@
   Compiling the schema performs a number of validations and reorganizations to
   make query execution faster and simpler, such as generating a flatter structure for the
   schema, and pre-computing many defaults."
-  (:refer-clojure :exclude [compile])
+  (:refer-clojure :exclude [compile clojure])
   (:require
     [clojure.spec.alpha :as s]
     [com.walmartlabs.lacinia.introspection :as introspection]

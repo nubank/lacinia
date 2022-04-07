@@ -1,4 +1,4 @@
-(defproject nubank/lacinia "0.35.1-SNAPSHOT"
+(defproject nubank/lacinia "0.35.2-SNAPSHOT"
   :description "A GraphQL server implementation in Clojure"
   :url "Fork of com.walmartlabs/lacinia."
   :license {:name "Apache, Version 2.0"
@@ -7,7 +7,7 @@
             [test2junit "1.2.5"]
             [s3-wagon-private "1.3.1"]]
   :deploy-repositories [["releases" {:url "s3p://nu-maven/releases/" :no-auth true}]]
-  :dependencies [[org.clojure/clojure "1.9.0"]
+  :dependencies [[org.clojure/clojure "1.11.0"]
                  [clj-antlr "0.2.5"]
                  [org.clojure/data.json "0.2.6"]]
   :source-paths ["src"
